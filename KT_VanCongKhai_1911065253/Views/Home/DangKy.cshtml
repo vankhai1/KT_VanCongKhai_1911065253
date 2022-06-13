@@ -1,0 +1,40 @@
+﻿@model IEnumerable<KT_VanCongKhai_1911065253.Models.DangKy>
+
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DangKy</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayDK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaSV)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayDK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaSV)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaDK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaDK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaDK })
+        </td>
+    </tr>
+}
+
+</table>

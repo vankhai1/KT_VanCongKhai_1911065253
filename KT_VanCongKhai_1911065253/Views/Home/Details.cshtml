@@ -1,0 +1,61 @@
+﻿@model KT_VanCongKhai_1911065253.Models.SinhVien
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SinhVien</h4>
+    <hr />
+   
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.HoTen)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.HoTen)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.GioiTinh)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.GioiTinh)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NgaySinh)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NgaySinh)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Hinh)
+            </dt>
+
+            <dd>
+                <img src="@Model.Hinh " width="100px" height="100px" />
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MaNganh)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MaNganh)
+            </dd>
+
+        </dl>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaSV }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
